@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function list(){
+            var humb =document.querySelector(".humburger");
+            var nav =document.querySelector(".navbar");
+            nav.classList.toggle("down");
+        }
+          </script>
+</head>
+<body>
+    <header>
+
+        <div class="logo">logo</div>
+        <div class="humburger" onclick="list()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+           </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contaact</a></li>
+        </ul>
+    </nav>
+    <h1>hello hi welcome to websit!!!</h1>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        body{
+            background: #fcfcfc;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            min-height: 100vh;
+         width: 100%;
+        }
+        header{
+            background: #fff;
+            width: 80vw;
+            height: 60px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 999;
+            border-radius: 20px;
+            transition: .5s;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px 0 rgb(0,0,0,0.5);
+
+        }
+        .logo{
+            font-size: 30px;
+            color: #000;
+            margin: auto 30px;
+            text-transform: capitalize;
+        }
+        .humburger{
+            margin: auto 25px;
+            cursor: pointer;
+        }
+        .humburger .line{
+            width: 23px;
+            height: 2.5px;
+            margin: 5px;
+            background: #2bd9ce;
+            border-radius: 30px;
+        }
+        .navbar{
+            background: #fff;
+            width: 80vw;
+            height: 0px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 0 rgb(0,0,0,0.5);
+            transition: .5s;
+            overflow: hidden;
+            text-align: center;
+        }
+        .navbar.down{
+            height: 300px;
+
+        }
+        .navbar ul{
+            margin-top: 70px;
+            transition: .5s;
+        }.navbar ul li a{
+            display: block;
+            color: #333223;
+            transition: .3s;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }.navbar ul li a:hover{
+            color: #2bd9ce;
+            background-color: rgb(230, 226, 220);
+        }.navbar ul li a.active{
+            color: #08e17c;
+        }
+
+    </style>
+</body>
+</html>
