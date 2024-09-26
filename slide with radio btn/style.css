@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body{
+    background:#eeeeea;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.card{
+    width: 80px;
+    border-radius: .75em;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgb(0,0,0,0.8);
+    
+}
+.card > .row{
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card > .row > .icon{
+    background: #222;
+    color: white    ;
+    border-radius: 50%;
+    height: 50PX;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.card > .row > .discription{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+
+
+}.discription p{
+    color: #b0b0b0;
+    padding-top: 5px;
+
+}.discription h4{
+    text-transform: uppercase;
+}
+input{
+    display: none;
+}
+input:checked + label{
+    width: 600px;
+    
+}
+input:checked + label .discription{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+
+}
+.card[for="c1"]{
+    background-image: url('../spotyfy/src/cover/Asal-Mein-\ Darshan-Raval.png');
+}
+.card[for="c2"]{
+    background-image: url('../spotyfy/src/cover/Deep_Chills_-_Run_Free_\(feat._IVIE\).jpg');
+}
+.card[for="c3"]{
+    background-image: url('../spotyfy/src/cover/saware-phanotm.jpeg');
+}
+.card[for="c4"]{
+    background-image: url('../spotyfy/src/cover/Lost-Sky-Fearless-ptII-feat-Chris-Linton-Trap-NCS-Copyright-Free-Music.jpg');
+}
+.card[for="c5"]{
+    background-image: url('../spotyfy/src/cover/swan\ aya\ he.jpg');
+}
